@@ -1,18 +1,17 @@
-import { StyleSheet, Text, View, TextInput, Image } from "react-native";
+import { TextInput } from "react-native";
 import styles from "../css/style";
 
-
-type propsFormField = {
+type formProps = {
     placeholder: string;
-    label: string;
-    secure:boolean;
+    secureTextEntry?: boolean;
 }
 
-export default function FormField(props: propsFormField) {
+export default function FormField(props: formProps){
     return(
-        <View>
-            <Text style={styles.esquerda}>{props.label}</Text>
-            <TextInput placeholder={props.placeholder} style={styles.input} secureTextEntry={props.secure}/>
-        </View>
+        <TextInput
+            placeholder={props.placeholder}
+            secureTextEntry={props.secureTextEntry}
+            style={styles.input}
+        />
     )
 }

@@ -1,4 +1,4 @@
-import {  StyleSheet, View, Text, Pressable, Image, } from "react-native";
+import { View, Text, Pressable, Image,} from "react-native";
 import { useState } from "react";
 import styles from "../css/style";
 
